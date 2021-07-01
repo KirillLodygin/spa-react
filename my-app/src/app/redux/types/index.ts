@@ -3,7 +3,7 @@ import { actions as PageActions } from "../actions/PageActions";
 import { actions as UserActions } from "../actions/UserActions";
 
 export interface IUserState {
-    name: string,
+    name: String,
     error: string,
     isFetching: boolean
 }
@@ -32,6 +32,6 @@ export interface IDispatchPageProps {
     getPhotos: (year: number) => any
 }
 
-type PropertiesTypes<T> = T extends {[key: string]: (...args: any) => infer U} ? U :never;
+type PropertiesTypes<T> = T extends {[key: string]: (...args: any) => infer U} ? U : never;
 export type PageActionsTypes = PropertiesTypes<typeof PageActions>;
 export type UserActionsTypes = PropertiesTypes<typeof UserActions>;

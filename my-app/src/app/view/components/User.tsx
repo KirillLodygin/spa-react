@@ -2,7 +2,7 @@ import React from 'react';
 import { handleLogin } from '../../redux/actions/UserActions';
 
 export type UserProps = {
-  name: string,
+  name: String,
   error: string,
   isFetching: boolean,
   handleLogin: typeof handleLogin,

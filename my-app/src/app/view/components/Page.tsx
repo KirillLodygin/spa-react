@@ -3,8 +3,8 @@ import { getPhotos } from '../../redux/actions/PageActions';
 import { PhotoManager } from './PhotoManager';
 
 export type PageProps = {
-  year: Number,
-  photos: Array<string>,
+  year: number,
+  photos: Array<any>,
   isFetching: Boolean,
   error: string,
   getPhotos: typeof getPhotos,
@@ -48,7 +48,7 @@ export const Page: React.FC<PageProps> = ({
     <div className="ib page">
       <p>{renderButtons()}</p>
       <h3>
-        {year} год [{photos.length}]
+        {year === 0 ? '' : String(year)} год [{photos.length}]
       </h3>
       {renderTemplate()}
     </div>

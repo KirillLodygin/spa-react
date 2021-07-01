@@ -2,7 +2,7 @@ import { IPageState, PageActionsTypes } from '../types';
 import { Reducer } from 'redux';
 
 const initialState = {
-  year: 2017,
+  year: 0,
   photos: [],
   isFetching: false,
   error: '',

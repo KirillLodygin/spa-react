@@ -11,7 +11,7 @@ export const ListPhoto: React.FC<ListPhotoProps> = ({ photos, openModal }) => {
       {photos.map(
         (photo: {
           id: React.Key | null | undefined,
-          sizes: { url: any }[],
+          sizes: { url: string }[],
           likes: {
             count:
               | string
@@ -20,7 +20,7 @@ export const ListPhoto: React.FC<ListPhotoProps> = ({ photos, openModal }) => {
               | {}
               | React.ReactElement<
                   any,
-                  string | React.JSXElementConstructor<any>
+                  string | React.JSXElementConstructor<any>,
                 >
               | React.ReactNodeArray
               | React.ReactPortal
